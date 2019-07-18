@@ -14,7 +14,7 @@ from rest_framework import status
 
 #GET API to fetch a bank details, given branch IFSC code
 @api_view(['GET'])
-@cache_page(60*2)
+# @cache_page(60*2)
 def bankDetail(request):
     permission_classes = [IsAuthenticated]
     try:
@@ -51,7 +51,7 @@ class bankDetails(ListAPIView):
     #     return BankDetails.objects.filter(bank_name=bank_name, city=city)
     
     #Caching Results
-    @method_decorator(cache_page(60*2))
-    def dispatch(self, *args, **kwargs):
-        return super(bankDetails, self).dispatch(*args, **kwargs)
+    # @method_decorator(cache_page(60*2))
+    # def dispatch(self, *args, **kwargs):
+    #     return super(bankDetails, self).dispatch(*args, **kwargs)
 
