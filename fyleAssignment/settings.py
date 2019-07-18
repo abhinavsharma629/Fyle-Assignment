@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'fyleAssignment.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=dj_database_url.config('DATABASE_URL')
+        default=dj_database_url.config('https://raw.githubusercontent.com/hydra629/db-dump1/master/New%20Microsoft%20Excel%20Worksheet1.csv')
     )
 }
 
@@ -113,12 +113,12 @@ REST_FRAMEWORK = {
 }
 
 #Database For Caching Results
-# CACHES = {
+#CACHES = {
 #    'default': {
 #       'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
 #       'LOCATION': 'cache',
 #    }
-# }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
