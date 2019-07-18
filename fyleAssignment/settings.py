@@ -114,10 +114,13 @@ REST_FRAMEWORK = {
 
 #Database For Caching Results
 CACHES = {
-   'default': {
-      'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-      'LOCATION': 'cache',
-   }
+#    'default': {
+#       'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+#       'LOCATION': 'cache',
+#    }
+    'default': dj_database_url.config(
+        default=dj_database_url.config('DATABASE_URL')
+    )
 }
 
 # Password validation
