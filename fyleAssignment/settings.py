@@ -26,7 +26,7 @@ SECRET_KEY = 'ecp%3gp6upb^%*&&$&)h*7%5$-uldtc-vxiq&os#p2#89ou%*v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'fyleAssignment.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=dj_database_url.config('https://raw.githubusercontent.com/hydra629/db-dump1/master/New%20Microsoft%20Excel%20Worksheet1.csv')
+        default=dj_database_url.config('DATABASE_URL')
     )
 }
 
@@ -113,12 +113,12 @@ REST_FRAMEWORK = {
 }
 
 #Database For Caching Results
-#CACHES = {
+# CACHES = {
 #    'default': {
 #       'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
 #       'LOCATION': 'cache',
 #    }
-#}
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -151,9 +151,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
