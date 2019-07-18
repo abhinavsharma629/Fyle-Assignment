@@ -1,1 +1,1 @@
-web: gunicorn fyle.wsgi --log-file -
+web: gunicorn fyleAssignment.wsgi --log-file -
