@@ -1,0 +1,11 @@
+curl -X GET \
+  'https://afternoon-oasis-36176.herokuapp.com/branches?bank_name=ABHYUDAYA+COOPERATIVE+BANK+LIMITED&city=MUMBAI&offset=2&limit=10' \
+  -H 'Accept: */*' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTY0MjMzODI1LCJqdGkiOiI5OWMwZDdhMTdmODA0NDk4YjY2YzhmMWVhMDNmNzYzZiIsInVzZXJfaWQiOjF9.urbyLBZ5NVoZCSkw1r_BeFcDrH_R2mVke6lM2QOHuUE' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: afternoon-oasis-36176.herokuapp.com' \
+  -H 'Postman-Token: 57bdb785-3a64-45f0-9318-3b27092eb160,8d1898d6-ba73-4417-a345-03fba07007ec' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache'

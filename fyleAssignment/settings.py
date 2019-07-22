@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,26 +81,24 @@ WSGI_APPLICATION = 'fyleAssignment.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     # 'default': {
-#     #     'ENGINE': 'django.db.backends.sqlite3',
-#     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     # }
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'fyleAssignment',
-#         'USER': 'postgres',
-#         'PASSWORD': 'abhi629@@',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
+#Local Database
 DATABASES = {
-    'default': dj_database_url.config(
-        default=dj_database_url.config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'fyleAssignment',
+        'USER': 'postgres',
+        'PASSWORD': 'abhi629@@',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
 }
+
+#Hosting Database
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=dj_database_url.config('DATABASE_URL')
+#     )
+# }
 
 #Rest Framework Settings
 REST_FRAMEWORK = {
@@ -113,12 +112,12 @@ REST_FRAMEWORK = {
 }
 
 #Database For Caching Results
-# CACHES = {
-#    'default': {
-#       'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-#       'LOCATION': 'cache',
-#    }
-# }
+CACHES = {
+   'default': {
+      'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+      'LOCATION': 'cache',
+   }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

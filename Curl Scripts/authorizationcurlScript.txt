@@ -1,0 +1,14 @@
+curl -X POST \
+  https://afternoon-oasis-36176.herokuapp.com/api/token/ \
+  -H 'Accept: */*' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: afternoon-oasis-36176.herokuapp.com' \
+  -H 'Postman-Token: 59b3db7d-4640-48fb-bb59-d8130d6a3168,b877b609-b74f-4883-8d6c-a507284f2abb' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache' \
+  -H 'content-length: 284' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -F username=admin \
+  -F password=abhi629@@
