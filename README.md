@@ -12,7 +12,7 @@
 - In this particular scenario as the bank details don't generally change in a short period of time , as well as for every authenticated       user (from the same system) the results happens to be same so the best approach to prevent db calls again and again is caching the         results once a user sends a get request and then serving the next requests with the cached results to prevent db calls and response         time. Default django db is used for caching , for a period of 2 minutes(customizable).
 
 ## Valid Urls
-- GET- http://127.0.0.1:8000/bankDetail?ifsc_code=x
-- GET- http://127.0.0.1:8000/branches?bank_name=ABHYUDAYA+COOPERATIVE+BANK+LIMITED&city=MUMBAI&offset=2&limit=10
-- POST- http://127.0.0.1:8000/api/token/ 
-- POST- http://127.0.0.1:8000/api/token/refresh/
+- GET- /bankDetail?ifsc_code=x
+- GET- /branches?bank_name=x&city=y&offset=2&limit=10
+- POST- /api/token/ 
+- POST- /api/token/refresh/
